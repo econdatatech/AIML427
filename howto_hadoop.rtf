@@ -1,0 +1,89 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2638
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 ArialMT;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red26\green26\blue26;\red255\green255\blue255;
+}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \CocoaLigature0 Upload kdd.data to home directory\
+Upload tree.py to home directory \
+\
+\
+ssh idlercorv@barretts.ecs.vuw.ac.nz\
+
+\f1\fs24 \cf0 \CocoaLigature1 \
+
+\f0\fs22 \cf2 \CocoaLigature0 ssh co246a-1\
+\
+\
+export HADOOP_VERSION=2.8.0\
+export HADOOP_PREFIX=/local/Hadoop/hadoop-$HADOOP_VERSION\
+export SPARK_HOME=/local/spark\
+export PATH=$\{PATH\}:$HADOOP_PREFIX/bin:$SPARK_HOME/bin\
+export HADOOP_CONF_DIR=$HADOOP_PREFIX/etc/hadoop\
+export YARN_CONF_DIR=$HADOOP_PREFIX/etc/hadoop\
+export PYSPARK_PYTHON=python3.7 \
+export LD_LIBRARY_PATH=$HADOOP_PREFIX/lib/native:$JAVA_HOME/jre/lib/amd64/server\
+need java8\
+\
+hadoop fs -put kdd.data /user/idlercorv/input/\
+\
+\
+spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 23\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 42\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 1\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 2\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 3\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 4\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 5\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 6\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 7\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 8\
+\
+\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 co246a-1% hadoop fs -copyToLocal /user/idlercorv/output1\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output2\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output3\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output4\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output5\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output6\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output7\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output8\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output23\
+co246a-1% hadoop fs -copyToLocal /user/idlercorv/output42
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+}

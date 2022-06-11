@@ -12,7 +12,7 @@ from pyspark.sql.functions import when, lit
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: tree <inputfile> <output directory> <seed>", file=sys.stderr)
+        print("Usage: logistic <inputfile> <output directory> <seed>", file=sys.stderr)
         sys.exit(-1)
 
     spark = SparkSession\

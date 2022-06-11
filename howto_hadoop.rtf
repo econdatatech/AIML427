@@ -5,7 +5,7 @@
 }
 {\*\expandedcolortbl;;\csgray\c0;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;
 }
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww19580\viewh8400\viewkind0
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs22 \cf2 \CocoaLigature0 Upload kdd.data to home directory\
@@ -74,16 +74,80 @@ spark-submit --master yarn --deploy-mode cluster tree.py
 \
 \
 
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 co246a-1% hadoop fs -copyToLocal /user/idlercorv/output1\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output2\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output3\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output4\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output5\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output6\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output7\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output8\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output23\
-co246a-1% hadoop fs -copyToLocal /user/idlercorv/output42
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 hadoop fs -copyToLocal /user/idlercorv/output1\
+hadoop fs -copyToLocal /user/idlercorv/output2\
+hadoop fs -copyToLocal /user/idlercorv/output3\
+hadoop fs -copyToLocal /user/idlercorv/output4\
+hadoop fs -copyToLocal /user/idlercorv/output5\
+hadoop fs -copyToLocal /user/idlercorv/output6\
+hadoop fs -copyToLocal /user/idlercorv/output7\
+hadoop fs -copyToLocal /user/idlercorv/output8\
+hadoop fs -copyToLocal /user/idlercorv/output23\
+hadoop fs -copyToLocal /user/idlercorv/output42\
+\
+hadoop fs -rm -r /user/idlercorv/output1\
+hadoop fs -rm -r /user/idlercorv/output2\
+hadoop fs -rm -r /user/idlercorv/output3\
+hadoop fs -rm -r /user/idlercorv/output4\
+hadoop fs -rm -r /user/idlercorv/output5\
+hadoop fs -rm -r /user/idlercorv/output6\
+hadoop fs -rm -r /user/idlercorv/output7\
+hadoop fs -rm -r /user/idlercorv/output8\
+hadoop fs -rm -r /user/idlercorv/output23\
+hadoop fs -rm -r /user/idlercorv/output42\
+\
+\
+spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 23\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 42\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 1\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 2\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 3\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 4\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 5\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 6\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 7\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
+\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 8\
+\
+
+\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 hadoop fs -copyToLocal /user/idlercorv/output1\
+hadoop fs -copyToLocal /user/idlercorv/output2\
+hadoop fs -copyToLocal /user/idlercorv/output3\
+hadoop fs -copyToLocal /user/idlercorv/output4\
+hadoop fs -copyToLocal /user/idlercorv/output5\
+hadoop fs -copyToLocal /user/idlercorv/output6\
+hadoop fs -copyToLocal /user/idlercorv/output7\
+hadoop fs -copyToLocal /user/idlercorv/output8\
+hadoop fs -copyToLocal /user/idlercorv/output23\
+hadoop fs -copyToLocal /user/idlercorv/output42
 \f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 }

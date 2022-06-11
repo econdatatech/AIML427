@@ -37,7 +37,7 @@ if __name__ == "__main__":
                           'dst_host_srv_serror_rate', 'dst_host_rerror_rate', 'dst_host_srv_rerror_rate','labelstr')
 
     data = data.withColumn('label', when(data.labelstr=='normal',
-    lit('0')).otherwise('1'))
+    lit('1')).otherwise('0'))
     data = data.withColumn("label", data.label.cast(IntegerType()))
 
     assembler = VectorAssembler().setInputCols(['duration',

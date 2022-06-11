@@ -95,8 +95,7 @@ if __name__ == "__main__":
     vals = [
          ('Train accuracy', (accuracy_train)),
          ('Test accuracy', (accuracy_test)),
-        ('Run time', (end-start)/60),
-        ('Seed', seed)
+        ('Run time', (end-start)/60)
     ]
     df = spark.createDataFrame(vals, columns)
 

@@ -1,6 +1,5 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2638
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 ArialMT;
-}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 ArialMT;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red26\green26\blue26;\red255\green255\blue255;
 }
 {\*\expandedcolortbl;;\csgray\c0;\cssrgb\c13333\c13333\c13333;\cssrgb\c100000\c100000\c100000;
@@ -8,15 +7,22 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww19580\viewh8400\viewkind0
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
-\f0\fs22 \cf2 \CocoaLigature0 Upload kdd.data to home directory\
-Upload tree.py to home directory \
+\f0\fs24 \cf2 \CocoaLigature0 Upload kdd.data to home directory on barretts.ecs.vuw.ac.nz\
+Upload tree.py to home directory barretts.ecs.vuw.ac.nz\
+Upload logistic.py to home directory barretts.ecs.vuw.ac.nz\
 \
 \
-ssh idlercorv@barretts.ecs.vuw.ac.nz\
-
-\f1\fs24 \cf0 \CocoaLigature1 \
-
-\f0\fs22 \cf2 \CocoaLigature0 ssh co246a-1\
+This can be done either via scp or after logging on to barretts using wget to download\
+https://ecs.wgtn.ac.nz/foswiki/pub/Courses/AIML427_2022T1/Assignments/kdd.data\
+https://github.com/econdatatech/AIML427/blob/main/logistic.py and \
+https://github.com/econdatatech/AIML427/blob/main/tree.py\
+\
+\
+Logon to barretts and Hadoop node\
+\
+ssh <username>@barretts.ecs.vuw.ac.nz\
+\cf0 \CocoaLigature1 \
+\cf2 \CocoaLigature0 ssh co246a-1\
 \
 \
 export HADOOP_VERSION=2.8.0\
@@ -29,125 +35,105 @@ export PYSPARK_PYTHON=python3.7 \
 export LD_LIBRARY_PATH=$HADOOP_PREFIX/lib/native:$JAVA_HOME/jre/lib/amd64/server\
 need java8\
 \
-hadoop fs -put kdd.data /user/idlercorv/input/\
+hadoop fs -put kdd.data /user/<USERNAME>/input/\
 \
 \
-spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 23\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 42\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 1\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 2\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 3\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 4\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 5\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 6\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 7\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 8\
+spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 23\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 42\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 1\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 2\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 3\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 4\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 5\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 6\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 7\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster tree.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /input/kdd.data /user/\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 <USERNAME>\cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /output 8\
 \
 \
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 hadoop fs -copyToLocal /user/idlercorv/output1\
-hadoop fs -copyToLocal /user/idlercorv/output2\
-hadoop fs -copyToLocal /user/idlercorv/output3\
-hadoop fs -copyToLocal /user/idlercorv/output4\
-hadoop fs -copyToLocal /user/idlercorv/output5\
-hadoop fs -copyToLocal /user/idlercorv/output6\
-hadoop fs -copyToLocal /user/idlercorv/output7\
-hadoop fs -copyToLocal /user/idlercorv/output8\
-hadoop fs -copyToLocal /user/idlercorv/output23\
-hadoop fs -copyToLocal /user/idlercorv/output42\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 hadoop fs -copyToLocal /user/<USERNAME>/output1\
+hadoop fs -copyToLocal /user/<USERNAME>/output2\
+hadoop fs -copyToLocal /user/<USERNAME>/output3\
+hadoop fs -copyToLocal /user/<USERNAME>/output4\
+hadoop fs -copyToLocal /user/<USERNAME>/output5\
+hadoop fs -copyToLocal /user/<USERNAME>/output6\
+hadoop fs -copyToLocal /user/<USERNAME>/output7\
+hadoop fs -copyToLocal /user/<USERNAME>/output8\
+hadoop fs -copyToLocal /user/<USERNAME>/output23\
+hadoop fs -copyToLocal /user/<USERNAME>/output42\
 \
-hadoop fs -rm -r /user/idlercorv/output1\
-hadoop fs -rm -r /user/idlercorv/output2\
-hadoop fs -rm -r /user/idlercorv/output3\
-hadoop fs -rm -r /user/idlercorv/output4\
-hadoop fs -rm -r /user/idlercorv/output5\
-hadoop fs -rm -r /user/idlercorv/output6\
-hadoop fs -rm -r /user/idlercorv/output7\
-hadoop fs -rm -r /user/idlercorv/output8\
-hadoop fs -rm -r /user/idlercorv/output23\
-hadoop fs -rm -r /user/idlercorv/output42\
+hadoop fs -rm -r /user/<USERNAME>/output1\
+hadoop fs -rm -r /user/<USERNAME>/output2\
+hadoop fs -rm -r /user/<USERNAME>/output3\
+hadoop fs -rm -r /user/<USERNAME>/output4\
+hadoop fs -rm -r /user/<USERNAME>/output5\
+hadoop fs -rm -r /user/<USERNAME>/output6\
+hadoop fs -rm -r /user/<USERNAME>/output7\
+hadoop fs -rm -r /user/<USERNAME>/output8\
+hadoop fs -rm -r /user/<USERNAME>/output23\
+hadoop fs -rm -r /user/<USERNAME>/output42\
 \
 \
-spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 23\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 42\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 1\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 2\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 3\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 4\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 5\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 6\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 7\
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py 
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
-\CocoaLigature1 /user/idlercorv/input/kdd.data /user/idlercorv/output 8\
+spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 23\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 42\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 1\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 2\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 3\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 4\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 5\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 6\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 7\
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 spark-submit --master yarn --deploy-mode cluster logistic.py \cf3 \cb4 \expnd0\expndtw0\kerning0
+\CocoaLigature1 /user/<USERNAME>/input/kdd.data /user/<USERNAME>/output 8\
 \
-
-\f0\fs22 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 hadoop fs -copyToLocal /user/idlercorv/output1\
-hadoop fs -copyToLocal /user/idlercorv/output2\
-hadoop fs -copyToLocal /user/idlercorv/output3\
-hadoop fs -copyToLocal /user/idlercorv/output4\
-hadoop fs -copyToLocal /user/idlercorv/output5\
-hadoop fs -copyToLocal /user/idlercorv/output6\
-hadoop fs -copyToLocal /user/idlercorv/output7\
-hadoop fs -copyToLocal /user/idlercorv/output8\
-hadoop fs -copyToLocal /user/idlercorv/output23\
-hadoop fs -copyToLocal /user/idlercorv/output42
-\f2\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 hadoop fs -copyToLocal /user/<USERNAME>/output1\
+hadoop fs -copyToLocal /user/<USERNAME>/output2\
+hadoop fs -copyToLocal /user/<USERNAME>/output3\
+hadoop fs -copyToLocal /user/<USERNAME>/output4\
+hadoop fs -copyToLocal /user/<USERNAME>/output5\
+hadoop fs -copyToLocal /user/<USERNAME>/output6\
+hadoop fs -copyToLocal /user/<USERNAME>/output7\
+hadoop fs -copyToLocal /user/<USERNAME>/output8\
+hadoop fs -copyToLocal /user/<USERNAME>/output23\
+hadoop fs -copyToLocal /user/<USERNAME>/output42
+\f1\fs20 \cf3 \cb4 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \
 }
